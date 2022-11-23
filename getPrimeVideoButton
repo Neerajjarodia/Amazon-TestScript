@@ -1,0 +1,17 @@
+package amazon.NavigationMenu;
+
+import org.openqa.selenium.By;
+import org.testng.annotations.Test;
+import amazon.GenericUtilities.BaseClass;
+import amazon.GenericUtilities.WebDriverUtility;
+
+public class PrimeVideoButton extends BaseClass{
+	@Test
+	public void getPrimeVideoButton() 
+	{
+	
+		driver.findElement(By.xpath("//span[text()='Prime']")).click();
+		
+	}
+
+}
