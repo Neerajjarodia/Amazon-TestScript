@@ -1,0 +1,26 @@
+package amazon.NavigationMenu;
+
+import java.io.IOException;
+
+import org.apache.poi.EncryptedDocumentException;
+import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
+import org.testng.annotations.Test;
+
+import amazon.GenericUtilities.BaseClass;
+import amazon.GenericUtilities.ExcelFileUtility;
+
+public class SearchForAProductAndFetchResult extends BaseClass{
+	@Test
+	public void searchWatch() throws EncryptedDocumentException, IOException
+	{
+		ExcelFileUtility eUtil = new ExcelFileUtility(); 
+		driver.findElement(By.id("twotabsearchtextbox")).sendKeys(eUtil.readDataFromExcelsheet("Sheet1", 0, 0),Keys.ENTER);
+		String result=driver.findElement(By.xpath("//span[contains(text(),'results for')]")).getText();
+		System.out.println(result);
+		
+		
+		
+	}
+
+}
