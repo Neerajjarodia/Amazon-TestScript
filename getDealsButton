@@ -1,0 +1,15 @@
+package amazon.NavigationMenu;
+
+import org.openqa.selenium.By;
+import org.testng.annotations.Test;
+
+import amazon.GenericUtilities.BaseClass;
+
+public class DealsButton extends BaseClass{
+	@Test
+	public void getDealsButton() 
+	{
+		driver.findElement(By.xpath("//a[@href='/deals?ref_=nav_cs_gb']")).click();
+	}
+
+}
