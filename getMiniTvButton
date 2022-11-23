@@ -1,0 +1,15 @@
+package amazon.NavigationMenu;
+
+import org.openqa.selenium.By;
+import org.testng.annotations.Test;
+
+import amazon.GenericUtilities.BaseClass;
+
+public class MiniTvButton extends BaseClass{
+	@Test
+	public void getMiniTvButton() 
+	{
+		driver.findElement(By.xpath("//a[text()='Amazon miniTV']")).click();
+	}
+
+}
