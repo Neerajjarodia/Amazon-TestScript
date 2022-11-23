@@ -1,0 +1,14 @@
+package amazon.NavigationMenu;
+
+import org.openqa.selenium.By;
+import org.testng.annotations.Test;
+
+import amazon.GenericUtilities.BaseClass;
+
+public class FashionButton extends BaseClass {
+@Test
+	public void getFashionButton() 
+	{
+		driver.findElement(By.xpath("//a[text()='Fashion']")).click();
+	}
+}
