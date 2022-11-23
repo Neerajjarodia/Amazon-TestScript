@@ -1,0 +1,16 @@
+package amazon.NavigationMenu;
+
+import org.openqa.selenium.By;
+import org.testng.annotations.Test;
+
+import amazon.GenericUtilities.BaseClass;
+
+public class HomeButton extends BaseClass{
+	@Test
+	public void getHomeButton() 
+	{
+		driver.findElement(By.xpath("//a[text()='Home & Kitchen']")).click();
+		
+	}
+
+}
